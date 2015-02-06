@@ -40,15 +40,14 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 TARGET_SCREEN_HEIGHT := 960
 TARGET_SCREEN_WIDTH := 540
 
-$(call inherit-product-if-exists, frameworks/native/build/phone-hdpi-dalvik-heap.mk)
-
 # Audio
 PRODUCT_PACKAGES += \
     libaudioamp
 
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
     $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf \
-    $(LOCAL_PATH)/dsp/snd_soc_msm/snd_soc_msm_Sitar:system/etc/snd_soc_msm/snd_soc_msm_Sitar
+    $(LOCAL_PATH)/audio/mixer_paths.xml:system/etc/mixer_paths.xml
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -103,3 +102,5 @@ PRODUCT_COPY_FILES += \
 
 # call the proprietary setup
 $(call inherit-product, vendor/htc/zara/zara-vendor.mk)
+
+$(call inherit-product-if-exists, frameworks/native/build/phone-hdpi-dalvik-heap.mk)
