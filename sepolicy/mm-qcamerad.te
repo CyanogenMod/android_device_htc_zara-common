@@ -1,4 +1,4 @@
-allow mm-qcamerad camera_socket:sock_file setattr;
+allow mm-qcamerad camera_socket:sock_file { setattr unlink };
 allow mm-qcamerad camera_sysfs:file { write open getattr };
 allow mm-qcamerad graphics_device:chr_file { open ioctl read write };
 allow mm-qcamerad graphics_device:dir search;
