@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-ifeq ($(TARGET_DEVICE),zara)
+ifneq ($(filter zara zaracl,$(TARGET_DEVICE)),)
 
 LOCAL_PATH := $(call my-dir)
 include $(call first-makefiles-under,$(LOCAL_PATH))
