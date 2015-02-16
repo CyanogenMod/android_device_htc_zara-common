@@ -1,3 +1,6 @@
+
+# Common Device configuration for HTC Desire 601 (zara)
+
 ## Copyright
 
 ```
@@ -18,4 +21,5 @@
 #
 ```
 
-# Common Device configuration for HTC Desire 601 (zara)
+
+# Used in Desire 601(zara)/Desire 601 CDMA(zaracl).
