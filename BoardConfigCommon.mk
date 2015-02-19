@@ -30,6 +30,7 @@
 LOCAL_PATH := device/htc/zara-common
 
 # Audio
+BOARD_AUDIO_AMPLIFIER := $(LOCAL_PATH)/libaudioamp
 BOARD_HAVE_HTC_CSDCLIENT := true
 BOARD_USES_FLUENCE_INCALL := true # use DMIC in call only
 BOARD_USES_SEPERATED_AUDIO_INPUT := true # use distinct voice recog/camcorder use cases
