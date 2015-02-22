@@ -14,8 +14,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.baseband.arch=msm \
-	ro.telephony.ril_class=HTCQualcommRIL
+    ro.telephony.ril_class=HTCQualcommRIL
 
 # Time services
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.timed.enable=true
+
+# Misc
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.isUsbOtgEnabled=true
