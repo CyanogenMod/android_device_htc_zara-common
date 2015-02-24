@@ -1,0 +1,6 @@
+on fs
+    mkdir /carrier 0770 system carrier
+
+on post-fs-data
+    chown system carrier /carrier
+    chmod 0770 /carrier
