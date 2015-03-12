@@ -1,4 +1,4 @@
-# Master file for snd_soc_msm sitar sound card proj=M4 DATE=20130624_Remove VOIP EC
+# Master file for snd_soc_msm sitar sound card proj=ZARA DATE=20130808_Correct HW VOIP case
 # Lists all use case verbs
 SectionUseCase."HiFi" {
 SectionVerb
@@ -1471,10 +1471,12 @@ SectionDevice
 	EnableSequence
 		'SLIM_0_TX Channels':0:Two
 		'SLIM TX3 MUX':0:DEC3
-		'DEC3 MUX':0:DMIC2
+		'DEC3 MUX':0:ADC1
+		'ADC1 Volume':1:100
 		'DEC3 Volume':1:62
 		'SLIM TX4 MUX':0:DEC4
-		'DEC4 MUX':0:DMIC4
+		'DEC4 MUX':0:ADC3
+		'ADC3 Volume':1:100
 		'DEC4 Volume':1:62
 	EndSequence
 
@@ -1482,8 +1484,10 @@ SectionDevice
 		'SLIM TX3 MUX':0:ZERO
 		'SLIM TX4 MUX':0:ZERO
 		'DEC3 MUX':0:ZERO
+		'ADC1 Volume':1:0
 		'DEC4 MUX':0:ZERO
 		'DEC3 Volume':1:0
+		'ADC3 Volume':1:0
 		'DEC4 Volume':1:0
 	EndSequence
 
@@ -1535,16 +1539,17 @@ SectionDevice
 	EnableSequence
 		'SLIM_0_TX Channels':0:One
 		'SLIM TX3 MUX':0:DEC3
-		'DEC3 MUX':0:DMIC2
+		'DEC3 MUX':0:ADC1
 		'DEC3 Volume':1:54
-		'MICBIAS1 CAPLESS Switch':1:0
+		'ADC1 Volume':1:100
 	EndSequence
 
 	DisableSequence
+		'SLIM_0_TX Channels':0:ZERO
 		'SLIM TX3 MUX':0:ZERO
 		'DEC3 MUX':0:ZERO
 		'DEC3 Volume':1:0
-		'MICBIAS1 CAPLESS Switch':1:0
+		'ADC1 Volume':1:0
 	EndSequence
 
 	ACDBID  4:2
@@ -1645,16 +1650,16 @@ SectionDevice
 	EnableSequence
 		'SLIM_0_TX Channels':0:One
 		'SLIM TX3 MUX':0:DEC3
-		'DEC3 MUX':0:DMIC2
+		'DEC3 MUX':0:ADC1
 		'DEC3 Volume':1:58
-		'MICBIAS1 CAPLESS Switch':1:0
+		'ADC1 Volume':1:100
 	EndSequence
 
 	DisableSequence
 		'SLIM TX3 MUX':0:ZERO
 		'DEC3 MUX':0:ZERO
 		'DEC3 Volume':1:0
-		'MICBIAS1 CAPLESS Switch':1:0
+		'ADC1 Volume':1:0
 	EndSequence
 
 	ACDBID  501:2
@@ -1796,22 +1801,18 @@ SectionDevice
 	Name "Speaker DMIC Endfire"
 
 	EnableSequence
-		'SLIM_0_TX Channels':0:Two
+		'SLIM_0_TX Channels':0:One
 		'SLIM TX3 MUX':0:DEC3
-		'DEC3 MUX':0:DMIC2
+		'DEC3 MUX':0:ADC3
+		'ADC3 Volume':1:100
 		'DEC3 Volume':1:62
-		'SLIM TX4 MUX':0:DEC4
-		'DEC4 MUX':0:DMIC4
-		'DEC4 Volume':1:62
 	EndSequence
 
 	DisableSequence
 		'SLIM TX3 MUX':0:ZERO
-		'SLIM TX4 MUX':0:ZERO
 		'DEC3 MUX':0:ZERO
-		'DEC4 MUX':0:ZERO
+		'ADC3 Volume':1:0
 		'DEC3 Volume':1:0
-		'DEC4 Volume':1:0
 	EndSequence
 
 	ACDBID  11:2
@@ -1824,7 +1825,7 @@ SectionDevice
 		'SLIM_0_TX Channels':0:One
 		'SLIM TX3 MUX':0:DEC4
 		'DEC4 MUX':0:DMIC4
-		'DEC4 Volume':1:54
+		'DEC4 Volume':1:70
 		'MICBIAS3 CAPLESS Switch':1:0
 	EndSequence
 
@@ -1977,16 +1978,16 @@ SectionDevice
 	EnableSequence
 		'SLIM_0_TX Channels':0:One
 		'SLIM TX3 MUX':0:DEC3
-		'DEC3 MUX':0:DMIC2
+		'DEC3 MUX':0:ADC1
+		'ADC1 Volume':1:100
 		'DEC3 Volume':1:54
-		'MICBIAS1 CAPLESS Switch':1:0
 	EndSequence
 
 	DisableSequence
 		'SLIM TX3 MUX':0:ZERO
 		'DEC3 MUX':0:ZERO
+		'ADC1 Volume':1:0
 		'DEC3 Volume':1:0
-		'MICBIAS1 CAPLESS Switch':1:0
 	EndSequence
 
 	ACDBID  36:2
@@ -2021,16 +2022,16 @@ SectionDevice
 	EnableSequence
 		'SLIM_0_TX Channels':0:One
 		'SLIM TX3 MUX':0:DEC3
-		'DEC3 MUX':0:DMIC2
+		'DEC3 MUX':0:ADC1
+		'ADC1 Volume':1:100
 		'DEC3 Volume':1:54
-		'MICBIAS1 CAPLESS Switch':1:0
 	EndSequence
 
 	DisableSequence
 		'SLIM TX3 MUX':0:ZERO
 		'DEC3 MUX':0:ZERO
 		'DEC3 Volume':1:0
-		'MICBIAS1 CAPLESS Switch':1:0
+		'ADC1 Volume':1:0
 	EndSequence
 
 	ACDBID  36:2
@@ -2239,16 +2240,16 @@ SectionDevice
 	EnableSequence
 		'SLIM_0_TX Channels':0:One
 		'SLIM TX3 MUX':0:DEC3
-		'DEC3 MUX':0:DMIC2
+		'DEC3 MUX':0:ADC3
+		'ADC3 Volume':1:100
 		'DEC3 Volume':1:56
-		'MICBIAS3 CAPLESS Switch':1:0
 	EndSequence
 
 	DisableSequence
 		'SLIM TX3 MUX':0:ZERO
 		'DEC3 MUX':0:ZERO
+		'ADC3 Volume':1:0
 		'DEC3 Volume':1:0
-		'MICBIAS3 CAPLESS Switch':1:0
 	EndSequence
 
 	ACDBID  11:2
@@ -2283,16 +2284,16 @@ SectionDevice
 	EnableSequence
 		'SLIM_0_TX Channels':0:One
 		'SLIM TX3 MUX':0:DEC3
-		'DEC3 MUX':0:ADC2
+		'DEC3 MUX':0:ADC3
+		'ADC3 Volume':1:100
 		'DEC3 Volume':1:54
-		'ADC2 Volume':1:100
 	EndSequence
 
 	DisableSequence
 		'SLIM TX3 MUX':0:ZERO
 		'DEC3 MUX':0:ZERO
 		'DEC3 Volume':1:0
-		'ADC2 Volume':1:0
+		'ADC3 Volume':1:0
 	EndSequence
 
 	ACDBID  307:2
@@ -2343,13 +2344,13 @@ SectionDevice
 	EnableSequence
 		'SLIM_0_TX Channels':0:Two
 		'SLIM TX3 MUX':0:DEC3
-		'DEC3 MUX':0:DMIC2
+		'DEC3 MUX':0:ADC1
+		'ADC1 Volume':1:100
 		'DEC3 Volume':1:62
 		'SLIM TX4 MUX':0:DEC4
-		'DEC4 MUX':0:DMIC4
+		'DEC4 MUX':0:ADC3
+		'ADC3 Volume':1:100
 		'DEC4 Volume':1:62
-		'MICBIAS1 CAPLESS Switch':1:0
-		'MICBIAS3 CAPLESS Switch':1:0
 	EndSequence
 
 	DisableSequence
@@ -2357,10 +2358,10 @@ SectionDevice
 		'SLIM TX4 MUX':0:ZERO
 		'DEC3 MUX':0:ZERO
 		'DEC4 MUX':0:ZERO
+		'ADC1 Volume':1:0
 		'DEC3 Volume':1:0
+		'ADC3 Volume':1:0
 		'DEC4 Volume':1:0
-		'MICBIAS1 CAPLESS Switch':1:0
-		'MICBIAS3 CAPLESS Switch':1:0
 	EndSequence
 
 	ACDBID  6:2
@@ -2430,22 +2431,18 @@ SectionDevice
 	Name "VOIP Line"
 
 	EnableSequence
-		'SLIM_0_TX Channels':0:Two
+		'SLIM_0_TX Channels':0:One
 		'SLIM TX3 MUX':0:DEC3
-		'DEC3 MUX':0:DMIC2
+		'DEC3 MUX':0:ADC3
+		'ADC3 Volume':1:100
 		'DEC3 Volume':1:62
-		'SLIM TX4 MUX':0:DEC4
-		'DEC4 MUX':0:DMIC4
-		'DEC4 Volume':1:62
 	EndSequence
 
 	DisableSequence
 		'SLIM TX3 MUX':0:ZERO
-		'SLIM TX4 MUX':0:ZERO
 		'DEC3 MUX':0:ZERO
-		'DEC4 MUX':0:ZERO
+		'ADC3 Volume':1:0
 		'DEC3 Volume':1:0
-		'DEC4 Volume':1:0
 	EndSequence
 
 	ACDBID  11:2
