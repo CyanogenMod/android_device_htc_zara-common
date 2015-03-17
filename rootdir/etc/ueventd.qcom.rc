@@ -1,4 +1,3 @@
-/dev/adsp/*            0660  system     audio
 /dev/block/mmcblk0p17  0660  system     system
 /dev/block/mmcblk0p18  0660  system     system
 /dev/cm3602            0640  compass    system
@@ -56,18 +55,17 @@
 /dev/smdcntl7          0640  radio      radio
 /dev/tfa9887           0660  system     audio
 /dev/tfa9887l          0660  system     audio
-/dev/timerirq          0640  system     system
 /dev/tty               0666  root       root
 /dev/tty_sdio_00       0660  system     system
 /dev/ttyGS0            0660  system     system
 /dev/ttyHS0            0660  bluetooth  bluetooth
 /dev/ttyHSL1           0660  system     system
 /dev/ttyHSUSB1         0600  system     system
-/dev/ttyHSUSB3         0660  autobot_access autobot_access
 /dev/ttyMSM0           0600  bluetooth  bluetooth
 /dev/uinput            0660  system     bluetooth
 /dev/usb_accessory     0660  root       usb
 /dev/video*            0660  system     camera
+
 /sys/devices/virtual/input/input*   enable      0660  root   input
 /sys/devices/virtual/input/input*   poll_delay  0660  root   input
 /sys/devices/platform/htc_battery/power_supply/battery              navigation                0220  system     system
