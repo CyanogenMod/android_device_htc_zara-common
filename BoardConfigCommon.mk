@@ -1,4 +1,4 @@
-# Copyright (C) 2013 The Android Open Source Project
+# Copyright (C) 2015 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -33,7 +33,7 @@ LOCAL_PATH := device/htc/zara-common
 BOARD_AUDIO_AMPLIFIER := $(LOCAL_PATH)/libaudioamp
 BOARD_HAVE_HTC_CSDCLIENT := true
 BOARD_USES_FLUENCE_INCALL := true # use DMIC in call only
-BOARD_USES_SEPERATED_AUDIO_INPUT := true # use distinct voice recog/camcorder use cases
+BOARD_USES_SEPERATED_AUDIO_INPUT := true # use distinct voice recorder/camcorder use cases
 BOARD_USES_SEPERATED_VOICE_SPEAKER := true # use distinct voice speaker use case
 BOARD_USES_SEPERATED_VOIP := true # use distinct VOIP use cases
 
