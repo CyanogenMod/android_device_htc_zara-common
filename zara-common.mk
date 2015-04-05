@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2013 The CyanogenMod Project
+# Copyright (C) 2015 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -99,7 +99,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/calibration.gpio4:/system/etc/calibration.gpio4 \
     $(LOCAL_PATH)/configs/p2p_supplicant_overlay.conf:/system/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/configs/wpa_supplicant_overlay.conf:/system/etc/wifi/wpa_supplicant_overlay.conf
-
 
 # call the proprietary setup
 $(call inherit-product, vendor/htc/zara/zara-vendor.mk)

@@ -7,10 +7,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.vendor.extension_library=/system/lib/libqc-opt.so
 
-# GPS
-PRODUCT_PROPERTY_OVERRIDES += \
-	persist.gps.qmienabled=true
-
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.baseband.arch=msm \
