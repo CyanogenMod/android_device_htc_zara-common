@@ -75,7 +75,6 @@ BOARD_KERNEL_BASE := 0x80600000
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01608000
-TARGET_KERNEL_CONFIG := zara_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/msm8960
 
 # Radio
@@ -83,6 +82,9 @@ BOARD_PROVIDES_LIBRIL := true
 BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril
 BOARD_RIL_FIVE_SEARCH_RESPONSES := true
 BOARD_USES_LEGACY_MMAP := true
+
+# Recovery
+TARGET_RECOVERY_FSTAB := device/htc/zara-common/rootdir/etc/fstab.qcom
 
 # SELinux
 -include device/qcom/sepolicy/sepolicy.mk
