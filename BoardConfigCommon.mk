@@ -84,6 +84,9 @@ BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril
 BOARD_RIL_FIVE_SEARCH_RESPONSES := true
 BOARD_USES_LEGACY_MMAP := true
 
+# Recovery
+TARGET_RECOVERY_FSTAB := device/htc/zara-common/rootdir/etc/fstab.qcom
+
 # SELinux
 -include device/qcom/sepolicy/sepolicy.mk
 
