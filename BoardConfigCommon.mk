@@ -112,6 +112,7 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 BOARD_RECOVERY_BLDRMSG_OFFSET := 2048
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
 
 # inherit from the proprietary version
 include vendor/htc/zara/BoardConfigVendor.mk
