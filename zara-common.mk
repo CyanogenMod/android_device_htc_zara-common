@@ -43,8 +43,8 @@ TARGET_SCREEN_WIDTH := 540
 $(call inherit-product-if-exists, frameworks/native/build/phone-hdpi-dalvik-heap.mk)
 
 # Audio
-PRODUCT_PACKAGES += \
-    libaudioamp
+#PRODUCT_PACKAGES += \
+#    libaudioamp
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf \
