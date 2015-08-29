@@ -61,21 +61,6 @@ static int amp_set_mode(amplifier_device_t *device, audio_mode_t mode)
     return ret;
 }
 
-static int amp_set_input_devices(amplifier_device_t *device, uint32_t devices)
-{
-    zara_device_t *tfa9887 = (zara_device_t *) device;
-
-    if (devices != 0) {
-        if (tfa9887->current_input_devices != devices) {
-            tfa9887->current_input_devices = devices;
-            /* Set amplifier mode when device changes */
-            amp_set_mode(device, tfa9887->current_mode);
-        }
-    }
-
-    return 0;
-}
-
 static int amp_set_output_devices(amplifier_device_t *device, uint32_t devices)
 {
     zara_device_t *tfa9887 = (zara_device_t *) device;
@@ -121,7 +106,7 @@ static int amp_module_open(const hw_module_t *module, UNUSED const char *name,
     zara_dev->amp_dev.common.version = HARDWARE_DEVICE_API_VERSION(1, 0);
     zara_dev->amp_dev.common.close = amp_dev_close;
 
-    zara_dev->amp_dev.set_input_devices = amp_set_input_devices;
+    zara_dev->amp_dev.set_input_devices = NULL;
     zara_dev->amp_dev.set_output_devices = amp_set_output_devices;
     zara_dev->amp_dev.set_mode = amp_set_mode;
     zara_dev->amp_dev.output_stream_start = NULL;
