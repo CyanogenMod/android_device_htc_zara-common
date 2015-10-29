@@ -61,7 +61,6 @@ PRODUCT_PACKAGES += \
 # Symbols package
 PRODUCT_PACKAGES += \
     libhtc_symbols
-	
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/gps.conf:system/etc/gps.conf
