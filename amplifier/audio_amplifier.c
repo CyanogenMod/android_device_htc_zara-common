@@ -18,6 +18,7 @@
 //#define LOG_NDEBUG 0
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <sys/ioctl.h>
 #include <fcntl.h>
 
@@ -36,7 +37,6 @@
 
 typedef struct zara_device {
     amplifier_device_t amp_dev;
-    uint32_t current_output_devices;
     audio_mode_t current_mode;
 } zara_device_t;
 
@@ -55,8 +55,6 @@ static int amp_set_mode(amplifier_device_t *device, audio_mode_t mode)
 static int amp_set_output_devices(amplifier_device_t *device, uint32_t devices)
 {
     zara_device_t *dev = (zara_device_t *) device;
-
-    dev->current_output_devices = devices;
 
     if ((dev->current_output_devices & DEVICE_OUT_WIRED_HEADSET) ||
             (dev->current_output_devices & DEVICE_OUT_WIRED_HEADPHONE)) {
@@ -125,7 +123,6 @@ static int amp_module_open(const hw_module_t *module, UNUSED const char *name,
     zara_dev->amp_dev.output_stream_standby = NULL;
     zara_dev->amp_dev.input_stream_standby = NULL;
 
-    zara_dev->current_output_devices = 0;
     zara_dev->current_mode = AUDIO_MODE_NORMAL;
 
     *device = (hw_device_t *) zara_dev;
