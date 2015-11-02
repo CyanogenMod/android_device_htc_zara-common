@@ -60,7 +60,8 @@ PRODUCT_PACKAGES += \
 
 # Symbols package
 PRODUCT_PACKAGES += \
-    libhtc_symbols
+    libhtc_symbols \
+    libboringssl-compat
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/gps.conf:system/etc/gps.conf
