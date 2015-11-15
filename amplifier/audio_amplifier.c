@@ -56,8 +56,8 @@ static int amp_set_output_devices(amplifier_device_t *device, uint32_t devices)
 {
     zara_device_t *dev = (zara_device_t *) device;
 
-    if ((dev->current_output_devices & DEVICE_OUT_WIRED_HEADSET) ||
-            (dev->current_output_devices & DEVICE_OUT_WIRED_HEADPHONE)) {
+    if ((devices & DEVICE_OUT_WIRED_HEADSET) ||
+            (devices & DEVICE_OUT_WIRED_HEADPHONE)) {
         rt5501_set_mode(dev->current_mode);
     }
 
