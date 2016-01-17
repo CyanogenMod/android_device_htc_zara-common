@@ -6,4 +6,6 @@ allow mediaserver debugfs:file r_file_perms;
 allow mediaserver shell_data_file:dir search;
 
 allow mediaserver mediaserver:netlink_kobject_uevent_socket create_socket_perms;
-allow mediaserver system_server:unix_stream_socket { read write };
+allow mediaserver system_server:unix_stream_socket rw_socket_perms;
+
+allow mediaserver system_file:file execmod;
