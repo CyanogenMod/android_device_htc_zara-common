@@ -89,6 +89,9 @@ TARGET_RECOVERY_FSTAB := device/htc/zara-common/rootdir/etc/fstab.qcom
 # SELinux
 -include device/qcom/sepolicy/sepolicy.mk
 
+BOARD_SEPOLICY_DIRS += \
+    device/htc/zara-common/sepolicy
+
 # Vold
 BOARD_VOLD_MAX_PARTITIONS := 39
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
